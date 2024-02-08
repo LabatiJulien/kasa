@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar bg="light" expand="lg">
+        <Container>
+          <Navbar.Brand href="#home" className="d-flex align-items-center">
+            <div className="mr-3">
+              <img
+                src={`${process.env.PUBLIC_URL}/logo.png`}
+                height="30"
+                alt="Logo Kasa"
+                style={{ marginRight: '10px' }} 
+              />
+            </div>
+            <div className="d-flex align-items-center">
+              <Nav.Link href="#home" className="Accueil">Accueil</Nav.Link>
+              <span className="separator"></span> {/* Ajout d'un span pour séparer les éléments */}
+              <Nav.Link href="#link" className="Propos">A propos</Nav.Link>
+            </div>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+
+      {<p>Hello</p>}
     </div>
   );
 }

@@ -6,19 +6,17 @@ function App() {
     <div>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home" className="d-flex align-items-center">
-            <div className="mr-3">
+          <Navbar.Brand href="#home" className="navbar-brand-custom">
+            <div className="logo">
               <img
                 src={`${process.env.PUBLIC_URL}/logo.png`}
-                height="30"
+                height="50"
                 alt="Logo Kasa"
-                style={{ marginRight: '10px' }} 
               />
             </div>
-            <div className="d-flex align-items-center">
-              <Nav.Link href="#home" className="Accueil">Accueil</Nav.Link>
-              <span className="separator"></span> {/* Ajout d'un span pour séparer les éléments */}
-              <Nav.Link href="#link" className="Propos">A propos</Nav.Link>
+            <div className="menu-items">
+              <div href="#home" className="menu-item">Accueil</div>
+              <div className="menu-item">A propos</div>
             </div>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

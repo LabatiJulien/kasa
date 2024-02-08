@@ -1,16 +1,16 @@
 
-.navbar-brand {
+.navbar-brand-custom {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
 }
 
-.nav-links {
-  margin-left: auto;
+.menu-items {
+  display: flex;
 }
 
-.separator {
-  margin: 0 10px; 
-height: 20px; 
+.menu-item {
+  margin-right: 50px; 
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
 }

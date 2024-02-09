@@ -1,5 +1,6 @@
 import './App.css';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
+import Banner from './banner.js'; // Importez le composant de la bannière
 
 function App() {
   return (
@@ -19,16 +20,9 @@ function App() {
               <div className="menu-item">A propos</div>
             </div>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              
-            </Nav>
-          </Navbar.Collapse>
         </Container>
       </Navbar>
-
-      {<p>Hello</p>}
+      <Banner /> {/* Utilisez le composant de la bannière */}
     </div>
   );
 }

@@ -8,6 +8,8 @@ function ApartementsGrid() {
        <Apartements/>
        <Apartements/>
        <Apartements/>
+       <Apartements/>
+       <Apartements/>
     </div>
   )
 }

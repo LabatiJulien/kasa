@@ -1,7 +1,8 @@
 import './App.css';
 import { Navbar, Container } from 'react-bootstrap';
-import Banner from './banner.js'; // Importez le composant de la bannière
-
+import Banner from './components/banner.js'; 
+import Apartements from './components/ApartementsGrid.jsx';
+import Footer from './components/Footer.jsx';
 function App() {
   return (
     <div>
@@ -22,7 +23,10 @@ function App() {
           </Navbar.Brand>
         </Container>
       </Navbar>
-      <Banner /> {/* Utilisez le composant de la bannière */}
+      
+      <Banner /> 
+      <Apartements/>    
+     <Footer/>
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { Navbar, Container } from 'react-bootstrap';
 import Banner from './components/banner.js'; 
 import Apartements from './components/ApartementsGrid.jsx';
 import Footer from './components/Footer.jsx';
+import {Link } from "react-router-dom";
 function App() {
   return (
     <div>
@@ -17,8 +18,8 @@ function App() {
               />
             </div>
             <div className="menu-items">
-              <div href="#home" className="menu-item">Accueil</div>
-              <div className="menu-item">A propos</div>
+            <Link to={`/flat`} >Accueil</Link>
+            <Link to={`/about`}>A propos</Link>
             </div>
           </Navbar.Brand>
         </Container>

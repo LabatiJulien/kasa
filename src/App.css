@@ -4,14 +4,9 @@
   justify-content: space-between;
   text-decoration: none;
   font-size: 24px;
-  font-weight: medium;
   margin-top: 30px;
   margin-left: 40px;
   margin-right: 40px;
-}
-
-.menu-items {
-  display: flex;
 }
 
 .menu-item  {
@@ -20,5 +15,6 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   margin-top: 20px;
-
+  display: flex;
+  align-self: center;
 }

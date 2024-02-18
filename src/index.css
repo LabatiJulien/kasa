@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.error-title {
+  color: #ff6060;
+  font-size: 288px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error-subtitle {
+  color: #ff6060;
+  font-size: 36px;
+  font-weight: medium;
+  text-align: center;
+}

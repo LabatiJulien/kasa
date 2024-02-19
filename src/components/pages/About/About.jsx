@@ -1,28 +1,23 @@
 import React from 'react';
 import './About.css';
-
+import Layout from '../../layout/Layout';
 function About() {
   return (
-    <div>
+    <Layout> 
+    <div className='about-container'>
+    <div className="about-content">
       <img
-        src="/Banner-image2.png"
-        alt="Bannière"
-        style={{
-          maxWidth: '90%',
-          width: '100%',
-          height: '223px',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          margin: '20px auto'
-        }}
+      className='banner-image2'
+        src="/Banner-image2.png" alt="Bannière"
       />
 
       <div>
         <details style={{ margin: '10px' }}>
           <summary>
             <h3>Fiabilité</h3>
-            <span>▼</span>
+           <img
+           className='arrow-back'
+            src="/arrow-back.png" alt="Flêche" />
           </summary>
           <div>
             <p>
@@ -35,7 +30,7 @@ function About() {
         <details style={{ margin: '10px' }}>
           <summary>
             <h3>Respect</h3>
-            <span>▼</span>
+            <img  className='arrow-back'src="/arrow-back.png" alt="Flêche" />
           </summary>
           <div>
             <p>
@@ -48,7 +43,7 @@ function About() {
         <details style={{ margin: '10px' }}>
           <summary>
             <h3>Service</h3>
-            <span>▼</span>
+            <img className='arrow-back' src="/arrow-back.png" alt="Flêche" />
           </summary>
           <div>
             <p>
@@ -61,7 +56,7 @@ function About() {
         <details style={{ margin: '10px' }}>
           <summary>
             <h3>Sécurité</h3>
-            <span>▼</span>
+            <img className='arrow-back'  src="/arrow-back.png" alt="Flêche" />
           </summary>
           <div>
             <p>
@@ -72,6 +67,8 @@ function About() {
         </details>
       </div>
     </div>
+    </div>
+    </Layout>
   );
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Layout from './components/layout/Layout.jsx';
-import Banner from './components/layout/banner.jsx'; 
-import Apartements from './components/ApartementsGrid.jsx';
+import Layout from '../../layout/Layout.jsx';
+import Banner from '../../layout/banner.jsx'; 
+import Apartements from './ApartementsGrid.jsx';
 
 
 function App() {

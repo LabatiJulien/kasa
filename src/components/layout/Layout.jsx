@@ -19,7 +19,7 @@ function Layout({ children }) {
             </div>
             </Link>
             <div className="menu-items" style={{ display: 'flex', gap: '20px' }}>
-              <Link to={`/flat`} style={{ color: 'black', textDecoration: 'none', fontSize: '24px' }}>Accueil</Link>
+              <Link to={`/`} style={{ color: 'black', textDecoration: 'none', fontSize: '24px' }}>Accueil</Link>
               <Link to={`/about`} style={{ color: 'black', textDecoration: 'none', fontSize: '24px' }}>A propos</Link>
             </div>
           </Navbar.Brand>

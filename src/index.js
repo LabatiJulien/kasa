@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
-import App from './App';
+import App from './components/pages/Accueil/App.jsx';
 import reportWebVitals from './reportWebVitals';
 import Layout from './components/layout/Layout.jsx';
 import { Link } from 'react-router-dom';
-import Apartements from './components/pages/Apartements.jsx';
-import About from './components/pages/About.jsx';
+import Apartements from './components/pages/Logements/Apartements.jsx';
+import About from './components/pages/About/About.jsx';
 const router = createBrowserRouter([
   {
     path: '/',

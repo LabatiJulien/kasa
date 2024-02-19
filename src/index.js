@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Layout from './components/Layout.jsx';
+import Layout from './components/layout/Layout.jsx';
 import { Link } from 'react-router-dom';
 
 

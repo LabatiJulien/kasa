@@ -1,6 +1,6 @@
 import React from 'react'
 import './ApartementGrid.css'
-import Apartements from './Apartements'
+import Apartements from './pages/Apartements'
 function ApartementsGrid() {
   return (
     <div className='grid'>

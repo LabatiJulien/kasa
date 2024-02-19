@@ -6,8 +6,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Layout from './components/layout/Layout.jsx';
 import { Link } from 'react-router-dom';
-
-
+import Apartements from './components/pages/Apartements.jsx';
+import About from './components/pages/About.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -28,11 +28,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/flat',
-    element: <Layout>  <h1>Nos Logements</h1> </Layout>
+    element: <Layout> <Apartements/>  <h1>Nos Logements</h1> </Layout>
   },
   {
     path: '/about',
-    element:  <Layout>  <h1>A propos</h1> </Layout>
+    element:  <Layout> <About/>  <h1>A propos</h1> </Layout>
   },
 ]);
 

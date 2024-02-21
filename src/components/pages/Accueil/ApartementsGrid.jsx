@@ -1,18 +1,36 @@
-import React from 'react'
-import './ApartementGrid.css'
-import Apartements from '../Logements/Apartements'
+import React, { useState, useEffect } from 'react';
+import './ApartementGrid.css';
+import Apartements from '../Logements/Apartements';
 
 function ApartementsGrid() {
+  const [apartementsData, setApartementsData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('/logements.json');
+        const data = await response.json();
+        setApartementsData(data); 
+      } catch (error) {
+        console.error('Erreur lors du chargement des données:', error);
+      }
+    };
+
+    fetchData(); 
+  }, []);
+
   return (
     <div className='grid'>
-       <Apartements titre="Titre de la location" isHomePage={true}/>
-       <Apartements titre="Titre de la location" isHomePage={true}/>
-       <Apartements titre="Titre de la location" isHomePage={true}/>
-       <Apartements titre="Titre de la location" isHomePage={true}/>
-       <Apartements titre="Titre de la location" isHomePage={true}/>
-       <Apartements titre="Titre de la location" isHomePage={true}/>
+      {apartementsData.slice(0, 6).map(apartement => (
+        <Apartements
+          key={apartement.id} 
+          titre={apartement.title}
+          cover={apartement.cover}
+          isHomePage={true}
+        />
+      ))}
     </div>
-  )
+  );
 }
 
-export default ApartementsGrid
+export default ApartementsGrid;

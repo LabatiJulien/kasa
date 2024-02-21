@@ -21,8 +21,8 @@ function About() {
           </summary>
           <div>
             <p>
-              Texte explicatif sur la fiabilité. Par exemple, des détails sur les mesures prises pour garantir la
-              fiabilité des produits ou des services.
+             Les annonces postées sur Kasa garantissent une fiabilité totale. 
+             Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.
             </p>
           </div>
         </details>
@@ -34,8 +34,8 @@ function About() {
           </summary>
           <div>
             <p>
-              Texte explicatif sur la qualité. Par exemple, des détails sur les normes de qualité appliquées ou les
-              processus de contrôle qualité.
+              La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de 
+              perturbation du voisinage entraînera une exclusion de notre plateforme.
             </p>
           </div>
         </details>
@@ -47,8 +47,8 @@ function About() {
           </summary>
           <div>
             <p>
-              Texte explicatif sur l'efficacité. Par exemple, des informations sur l'optimisation des processus ou des
-              performances des produits.
+            La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de 
+              perturbation du voisinage entraînera une exclusion de notre plateforme.
             </p>
           </div>
         </details>
@@ -60,8 +60,9 @@ function About() {
           </summary>
           <div>
             <p>
-              Texte explicatif sur la performance. Par exemple, des données sur les performances passées ou des
-              caractéristiques de performance.
+             La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement corresponds aux critères
+             de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier
+             que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.
             </p>
           </div>
         </details>

@@ -1,17 +1,17 @@
 import React from 'react'
-import './Apartement.css'
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
+function Apartements({ titre, isHomePage }) {
+  const titreAffiche = titre || <h1>Cozy loft on the Canal Saint-Martin</h1>;
 
-function Apartements() {
   return (
-   
-    <Link to={`/flat`} style={{textDecoration: 'none'}}>
-    <div className='apartement'>
-     <div className='apartementSubtitle'>Titre de la location</div>
+    <Link to={`/flat`} style={{ textDecoration: 'none' }}>
+      <div className={`apartement ${isHomePage ? 'home' : ''}`}>
+        <div>
+          <div className='apartementSubtitle'>{titreAffiche}</div>
+        </div>
       </div>
-      </Link>
-      
+    </Link>
   )
 }
 

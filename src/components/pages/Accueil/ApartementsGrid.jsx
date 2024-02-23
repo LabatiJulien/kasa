@@ -21,7 +21,7 @@ function ApartementsGrid() {
 
   return (
     <div className='grid'>
-      {apartementsData.slice(0, 6).map(apartement => (
+      {apartementsData.map(apartement => (
         <Apartements
           key={apartement.id} 
           titre={apartement.title}

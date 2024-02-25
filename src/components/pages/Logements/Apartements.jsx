@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './Apartement.css';
 
 function Apartements() {
   const { id } = useParams();
@@ -26,7 +27,7 @@ function Apartements() {
 
   return (
     <div>
-      <h2>{apartmentTitle}</h2>
+      <h2 className="apartment-title">{apartmentTitle}</h2>
     </div>
   );
 }

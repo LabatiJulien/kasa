@@ -8,21 +8,20 @@ function Layout({ children }) {
     <div>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home" className="navbar-brand-custom">
-            <Link to="/"> 
-            <div className="logo">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Link to="/">
               <img
                 src={`${process.env.PUBLIC_URL}/logo.png`}
                 height="50"
                 alt="Logo Kasa"
+                style={{ marginLeft: '20px', marginTop: '30px' }}
               />
-            </div>
             </Link>
-            <div className="menu-items" style={{ display: 'flex', gap: '20px' }}>
-              <Link to={`/`} style={{ color: 'black', textDecoration: 'none', fontSize: '24px' }}>Accueil</Link>
-              <Link to={`/about`} style={{ color: 'black', textDecoration: 'none', fontSize: '24px' }}>A propos</Link>
+            <div className="menu-items" style={{ marginRight: '20px' }}>
+              <Link to={`/`} style={{ color: 'black', textDecoration: 'none', fontSize: '24px', marginLeft: '20px',marginRight: '20px' }}>Accueil</Link>
+              <Link to={`/about`} style={{ color: 'black', textDecoration: 'none', fontSize: '24px', marginLeft: '20px',marginRight: '20px' }}>À propos</Link>
             </div>
-          </Navbar.Brand>
+          </div>
         </Container>
       </Navbar>
       {children}

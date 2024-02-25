@@ -10,6 +10,7 @@ function ApartementsGrid() {
       try {
         const response = await fetch('/logements.json');
         const data = await response.json();
+        console.log("Données des appartements :", data); 
         setApartementsData(data); 
       } catch (error) {
         console.error('Erreur lors du chargement des données:', error);

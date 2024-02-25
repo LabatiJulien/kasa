@@ -59,6 +59,8 @@ color: #ff6060;
     left: 0;
     width: 100%;
     color: white;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajoute un fond semi-transparent */
     padding: 0.5rem;
     font-weight: bold;
-  }
+    box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
+}

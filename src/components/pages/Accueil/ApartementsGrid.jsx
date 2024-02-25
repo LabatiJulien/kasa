@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; 
 import './ApartementGrid.css';
-import Apartements from '../Logements/Apartements';
 
 function ApartementsGrid() {
   const [apartementsData, setApartementsData] = useState([]);
@@ -23,12 +23,10 @@ function ApartementsGrid() {
   return (
     <div className='grid'>
       {apartementsData.map(apartement => (
-        <Apartements
-          key={apartement.id} 
-          titre={apartement.title}
-          cover={apartement.cover}
-          isHomePage={true}
-        />
+        <Link to={`/flat/${apartement.id}`} key={apartement.id} className="apartement home">
+          <img className="apartementCover" src={apartement.cover} alt={apartement.title} />
+          <div className="apartementSubtitle">{apartement.title}</div>
+        </Link>
       ))}
     </div>
   );

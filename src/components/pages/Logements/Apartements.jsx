@@ -1,19 +1,14 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
-function Apartements({ titre, cover, isHomePage }) {
-  console.log("Titre reçu :", titre); 
-
-  const titreAffiche = titre || "Cozy loft on the Canal Saint-Martin";
+function Apartements() {
+  
+  const { title } = useParams();
 
   return (
-    <Link to={`/flat`} style={{ textDecoration: 'none' }}>
-      <div className={`apartement ${isHomePage ? 'home' : ''}`}>
-        <div className="apartementCover" style={{backgroundImage: `url(${cover})`}}>
-          <div className='apartementSubtitle'>{titreAffiche}</div>
-        </div>
-      </div>
-    </Link>
+    <div>
+      <h2>{title}</h2>
+    </div>
   );
 }
 

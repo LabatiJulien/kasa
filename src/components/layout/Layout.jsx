@@ -14,7 +14,7 @@ function Layout({ children }) {
                 src={`${process.env.PUBLIC_URL}/logo.png`}
                 height="50"
                 alt="Logo Kasa"
-                style={{ marginLeft: '20px', marginTop: '30px' }}
+                style={{ marginLeft: '30px', marginTop: '30px' }}
               />
             </Link>
             <div className="menu-items" style={{ marginRight: '20px' }}>

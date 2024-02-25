@@ -4,30 +4,35 @@ import './Apartement.css';
 
 function Apartements() {
   const { id } = useParams();
-  const [apartmentTitle, setApartmentTitle] = useState(null);
+  const [apartmentData, setApartmentData] = useState(null);
 
   useEffect(() => {
-    const fetchApartmentTitle = async () => {
+    const fetchApartmentData = async () => {
       try {
         const response = await fetch(`/logements.json`);
         const data = await response.json();
         const apartment = data.find(apartment => apartment.id === id);
         if (apartment) {
-          setApartmentTitle(apartment.title);
+          setApartmentData(apartment);
         } else {
           console.error('L\'appartement avec l\'ID spécifié n\'a pas été trouvé.');
         }
       } catch (error) {
-        console.error('Erreur lors du chargement du titre de l\'appartement:', error);
+        console.error('Erreur lors du chargement des données de l\'appartement:', error);
       }
     };
   
-    fetchApartmentTitle();
+    fetchApartmentData();
   }, [id]);
 
   return (
     <div>
-      <h2 className="apartment-title">{apartmentTitle}</h2>
+      {apartmentData && (
+        <div>
+          <h2 className="apartment-title">{apartmentData.title}</h2>
+          <p className="apartment-location">Location: {apartmentData.location}</p>
+        </div>
+      )}
     </div>
   );
 }

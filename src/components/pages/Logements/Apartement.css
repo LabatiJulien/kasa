@@ -2,6 +2,14 @@
     font-size: 36px;
     font-weight: bold;
     color: #ff6060;
-    margin-bottom: 20px;
+    margin-bottom: 0; 
+    margin-left: 30px;
+  }
+  
+  .apartment-location {
+    font-size: 18px;
+    display: inline; 
+    margin-left: 30px; 
+    font-weight: bold;
   }
   

@@ -81,6 +81,19 @@ function Apartements() {
           <div className="rating-stars">
             {renderStars()}
           </div>
+          <div>
+          <details style={{ margin: '10px' }}>
+          <summary className="custom-summary">
+            <h3>Description</h3>
+           <img
+           className='arrow-back'
+            src="/arrow-back.png" alt="Flêche" />
+          </summary>
+          <div className='description-container'>
+            <p>{apartmentData.description} </p>
+          </div>
+        </details>
+          </div>
         </div>
       )}
     </div>

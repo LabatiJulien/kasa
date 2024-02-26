@@ -119,3 +119,19 @@
   margin-right: 30px;
 }
 
+.custom-summary {
+    height: 20px;
+    width: 500px;
+    margin-left: 40px;
+    background-color: #ff6060;
+    padding: 10px;
+    border: 1px solid lightgray;
+    margin-bottom: 0;
+}
+.description-container {
+  background-color: lightgrey; 
+  padding: 10px; 
+  word-wrap: break-word; 
+  width: 500px;
+  margin-left: 40px;
+}

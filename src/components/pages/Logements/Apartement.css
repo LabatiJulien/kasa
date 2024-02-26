@@ -65,7 +65,6 @@
 
 .apartment-location {
   font-size: 18px;
-  font-weight: bold;
   margin-top: 0;
   margin-left: 30px;
 }
@@ -73,11 +72,6 @@
 .apartment-header {
   display: flex;
   justify-content: space-between; 
-}
-
-.apartment-title {
-  font-size: 24px;
-  margin-bottom: 0; 
 }
 
 .host-name {

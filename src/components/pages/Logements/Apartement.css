@@ -128,10 +128,19 @@
     border: 1px solid lightgray;
     margin-bottom: 0;
 }
-.description-container {
-  background-color: lightgrey; 
+.descriptionEquipement-container {
+  background-color: #f6f6f6;
   padding: 10px; 
   word-wrap: break-word; 
   width: 500px;
   margin-left: 40px;
+}
+
+.equipment-list {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.equipment-item {
+  display: block; 
 }

@@ -38,10 +38,11 @@ function Apartements() {
 
   const renderStars = () => {
     const rating = parseInt(apartmentData.rating);
-    const filledStars = Array.from({ length: rating }, (_, index) => <span key={index} style={{ color: '#ff6060' }}>★</span>);
-    const emptyStars = Array.from({ length: 5 - rating }, (_, index) => <span key={index} style={{ color: '#E3E3E3' }}>★</span>);
+    const filledStars = Array.from({ length: rating }, (_, index) => <span key={`filled-${index}`} style={{ color: '#ff6060' }}>★</span>);
+    const emptyStars = Array.from({ length: 5 - rating }, (_, index) => <span key={`empty-${index}`} style={{ color: '#E3E3E3' }}>★</span>);
     return [...filledStars, ...emptyStars];
   };
+  
 
   return (
     <div>

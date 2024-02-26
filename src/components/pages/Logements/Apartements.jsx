@@ -38,32 +38,42 @@ function Apartements() {
 
   return (
     <div>
-  {apartmentData && (
-    <div>
-      <div className="carousel-container">
-        <button className="carousel-arrow carousel-arrow-left" onClick={previousImage}>
-          <img src="/Vector-left.png" alt="Previous" />
-        </button>
-        <img className="carousel-image" src={apartmentData.pictures[currentImageIndex]} alt={`Appartement ${currentImageIndex + 1}`} />
-        <button className="carousel-arrow carousel-arrow-right" onClick={nextImage}>
-          <img src="/Vector-right.png" alt="Next" />
-        </button>
-        <div className="carousel-counter">{`${currentImageIndex + 1}/${totalImages}`}</div>
-      </div>
-      <div className="apartment-header">
-        <div>
-          <h2 className="apartment-title">{apartmentData.title}</h2>
-          <p className="apartment-location">{apartmentData.location}</p>
+    {apartmentData && (
+      <div>
+        <div className="carousel-container">
+          <button className="carousel-arrow carousel-arrow-left" onClick={previousImage}>
+            <img src="/Vector-left.png" alt="Previous" />
+          </button>
+          <img className="carousel-image" src={apartmentData.pictures[currentImageIndex]} alt={`Appartement ${currentImageIndex + 1}`} />
+          <button className="carousel-arrow carousel-arrow-right" onClick={nextImage}>
+            <img src="/Vector-right.png" alt="Next" />
+          </button>
+          <div className="carousel-counter">{`${currentImageIndex + 1}/${totalImages}`}</div>
         </div>
-        <div className="host-info">
-          <p className="host-name">{apartmentData.host.name}</p>
-          <img className="host-picture" src={apartmentData.host.picture} alt={apartmentData.host.name} />
+        <div className="apartment-header">
+          <div>
+            <h2 className="apartment-title">{apartmentData.title}</h2>
+            <p className="apartment-location">Location: {apartmentData.location}</p>
+            <div className="tags-and-rating-container">
+            <div className="tags-container">
+              {apartmentData.tags && apartmentData.tags.map((tag, index) => (
+                <div key={index} className="tag">{tag}</div>
+              ))}
+            </div>
+            <div className="rating-container">
+              <p className="rating">Rating: {apartmentData.rating}</p>
+            </div>
+          </div>
         </div>
+          <div className="host-info">
+            <p className="host-name">{apartmentData.host.name}</p>
+            <img className="host-picture" src={apartmentData.host.picture} alt={apartmentData.host.name} />
+          </div>
+              </div>
       </div>
-    </div>
-  )}
-</div>
-);
+    )}
+  </div>
+  );
 }
 
 export default Apartements;

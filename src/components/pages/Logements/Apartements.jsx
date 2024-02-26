@@ -81,36 +81,35 @@ function Apartements() {
           <div className="rating-stars">
             {renderStars()}
           </div>
-          <div>
-          <details style={{ margin: '10px' }}>
-          <summary className="custom-summary">
-            <h3>Description</h3>
-           <img
-           className='arrow-back'
-            src="/arrow-back.png" alt="Flêche" />
-          </summary>
-          <div className='descriptionEquipement-container'>
-            <p>{apartmentData.description} </p>
-          </div>
-        </details>
-          </div>
-          <div>
-  <details style={{ margin: '10px' }}>
-    <summary className="custom-summary">
-      <h3>Équipements</h3>
-      <img className='arrow-back' src="/arrow-back.png" alt="Flêche" />
-    </summary>
-    <div className='descriptionEquipement-container'>
-      <ul className='equipment-list'>
-        {apartmentData.equipments.map((equipment, index) => (
-          <li key={index} className='equipment-item'>{equipment}</li>
-        ))}
-      </ul>
-    </div>
-  </details>
+          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+  <div>
+    <details style={{ margin: '10px' }}>
+      <summary className="custom-summary">
+        <h3>Description</h3>
+        <img className='arrow-back' src="/arrow-back.png" alt="Flêche" />
+      </summary>
+      <div className='descriptionEquipement-container'>
+        <p>{apartmentData.description} </p>
+      </div>
+    </details>
+  </div>
+ <div>
+    <details style={{ margin: '10px' }}>
+      <summary className="custom-summary">
+        <h3>Équipements</h3>
+        <img className='arrow-back' src="/arrow-back.png" alt="Flêche" />
+      </summary>
+      <div className='descriptionEquipement-container'>
+        <ul className='equipment-list'>
+          {apartmentData.equipments.map((equipment, index) => (
+            <li key={index} className='equipment-item'>{equipment}</li>
+          ))}
+        </ul>
+      </div>
+    </details>
+  </div>
 </div>
-
-        </div>
+      </div>
       )}
     </div>
   );

@@ -42,21 +42,26 @@ function Apartements() {
     const emptyStars = Array.from({ length: 5 - rating }, (_, index) => <span key={`empty-${index}`} style={{ color: '#E3E3E3' }}>★</span>);
     return [...filledStars, ...emptyStars];
   };
-  
-
   return (
     <div>
       {apartmentData && (
         <div>
           <div className="carousel-container">
-            <button className="carousel-arrow carousel-arrow-left" onClick={previousImage}>
-              <img src="/Vector-left.png" alt="Previous" />
-            </button>
-            <img className="carousel-image" src={apartmentData.pictures[currentImageIndex]} alt={`Appartement ${currentImageIndex + 1}`} />
-            <button className="carousel-arrow carousel-arrow-right" onClick={nextImage}>
-              <img src="/Vector-right.png" alt="Next" />
-            </button>
-            <div className="carousel-counter">{`${currentImageIndex + 1}/${totalImages}`}</div>
+            {totalImages > 1 && (
+              <>
+                <button className="carousel-arrow carousel-arrow-left" onClick={previousImage}>
+                  <img src="/Vector-left.png" alt="Previous" />
+                </button>
+                <img className="carousel-image" src={apartmentData.pictures[currentImageIndex]} alt={`Appartement ${currentImageIndex + 1}`} />
+                <button className="carousel-arrow carousel-arrow-right" onClick={nextImage}>
+                  <img src="/Vector-right.png" alt="Next" />
+                </button>
+                <div className="carousel-counter">{`${currentImageIndex + 1}/${totalImages}`}</div>
+              </>
+            )}
+            {totalImages === 1 && (
+              <img className="carousel-image" src={apartmentData.pictures[0]} alt={`Appartement 1`} />
+            )}
           </div>
           <div className="apartment-header">
             <div>
@@ -80,6 +85,6 @@ function Apartements() {
       )}
     </div>
   );
-}
+                }  
 
 export default Apartements;

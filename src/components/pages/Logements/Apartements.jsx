@@ -6,6 +6,7 @@ function Apartements() {
   const { id } = useParams();
   const [apartmentData, setApartmentData] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [totalImages, setTotalImages] = useState(0);
 
   useEffect(() => {
     const fetchApartmentData = async () => {
@@ -15,6 +16,7 @@ function Apartements() {
         const apartment = data.find(apartment => apartment.id === id);
         if (apartment) {
           setApartmentData(apartment);
+          setTotalImages(apartment.pictures.length);
         } else {
           console.error('L\'appartement avec l\'ID spécifié n\'a pas été trouvé.');
         }
@@ -27,30 +29,41 @@ function Apartements() {
   }, [id]);
 
   const previousImage = () => {
-    setCurrentImageIndex(prevIndex => (prevIndex === 0 ? apartmentData.pictures.length - 1 : prevIndex - 1));
+    setCurrentImageIndex(prevIndex => (prevIndex === 0 ? totalImages - 1 : prevIndex - 1));
   };
 
   const nextImage = () => {
-    setCurrentImageIndex(prevIndex => (prevIndex === apartmentData.pictures.length - 1 ? 0 : prevIndex + 1));
+    setCurrentImageIndex(prevIndex => (prevIndex === totalImages - 1 ? 0 : prevIndex + 1));
   };
 
   return (
     <div>
-      {apartmentData && (
+  {apartmentData && (
+    <div>
+      <div className="carousel-container">
+        <button className="carousel-arrow carousel-arrow-left" onClick={previousImage}>
+          <img src="/Vector-left.png" alt="Previous" />
+        </button>
+        <img className="carousel-image" src={apartmentData.pictures[currentImageIndex]} alt={`Appartement ${currentImageIndex + 1}`} />
+        <button className="carousel-arrow carousel-arrow-right" onClick={nextImage}>
+          <img src="/Vector-right.png" alt="Next" />
+        </button>
+        <div className="carousel-counter">{`${currentImageIndex + 1}/${totalImages}`}</div>
+      </div>
+      <div className="apartment-header">
         <div>
-          <div className="carousel-container">
-          <button className="carousel-arrow carousel-arrow-left" onClick={previousImage}>
-  <img src="/Vector-left.png" alt="Previous" /></button>
-            <img className="carousel-image" src={apartmentData.pictures[currentImageIndex]} alt={`Appartement ${currentImageIndex + 1}`} />
-            <button className="carousel-arrow carousel-arrow-right" onClick={nextImage}>
-  <img src="/Vector-right.png" alt="Next" /></button>
-          </div>
           <h2 className="apartment-title">{apartmentData.title}</h2>
-          <p className="apartment-location">Location: {apartmentData.location}</p>
+          <p className="apartment-location">{apartmentData.location}</p>
         </div>
-      )}
+        <div className="host-info">
+          <p className="host-name">{apartmentData.host.name}</p>
+          <img className="host-picture" src={apartmentData.host.picture} alt={apartmentData.host.name} />
+        </div>
+      </div>
     </div>
-  );
+  )}
+</div>
+);
 }
 
 export default Apartements;

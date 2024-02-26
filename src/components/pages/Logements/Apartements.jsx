@@ -36,43 +36,48 @@ function Apartements() {
     setCurrentImageIndex(prevIndex => (prevIndex === totalImages - 1 ? 0 : prevIndex + 1));
   };
 
+  const renderStars = () => {
+    const rating = parseInt(apartmentData.rating);
+    const filledStars = Array.from({ length: rating }, (_, index) => <span key={index} style={{ color: '#ff6060' }}>★</span>);
+    const emptyStars = Array.from({ length: 5 - rating }, (_, index) => <span key={index} style={{ color: '#E3E3E3' }}>★</span>);
+    return [...filledStars, ...emptyStars];
+  };
+
   return (
     <div>
-    {apartmentData && (
-      <div>
-        <div className="carousel-container">
-          <button className="carousel-arrow carousel-arrow-left" onClick={previousImage}>
-            <img src="/Vector-left.png" alt="Previous" />
-          </button>
-          <img className="carousel-image" src={apartmentData.pictures[currentImageIndex]} alt={`Appartement ${currentImageIndex + 1}`} />
-          <button className="carousel-arrow carousel-arrow-right" onClick={nextImage}>
-            <img src="/Vector-right.png" alt="Next" />
-          </button>
-          <div className="carousel-counter">{`${currentImageIndex + 1}/${totalImages}`}</div>
-        </div>
-        <div className="apartment-header">
-          <div>
-            <h2 className="apartment-title">{apartmentData.title}</h2>
-            <p className="apartment-location">Location: {apartmentData.location}</p>
-            <div className="tags-and-rating-container">
-            <div className="tags-container">
-              {apartmentData.tags && apartmentData.tags.map((tag, index) => (
-                <div key={index} className="tag">{tag}</div>
-              ))}
+      {apartmentData && (
+        <div>
+          <div className="carousel-container">
+            <button className="carousel-arrow carousel-arrow-left" onClick={previousImage}>
+              <img src="/Vector-left.png" alt="Previous" />
+            </button>
+            <img className="carousel-image" src={apartmentData.pictures[currentImageIndex]} alt={`Appartement ${currentImageIndex + 1}`} />
+            <button className="carousel-arrow carousel-arrow-right" onClick={nextImage}>
+              <img src="/Vector-right.png" alt="Next" />
+            </button>
+            <div className="carousel-counter">{`${currentImageIndex + 1}/${totalImages}`}</div>
+          </div>
+          <div className="apartment-header">
+            <div>
+              <h2 className="apartment-title">{apartmentData.title}</h2>
+              <p className="apartment-location">Location: {apartmentData.location}</p>  
+              <div className="tags-container">
+                {apartmentData.tags && apartmentData.tags.map((tag, index) => (
+                  <div key={index} className="tag">{tag}</div>
+                ))}
+              </div>         
             </div>
-            <div className="rating-container">
-              <p className="rating">Rating: {apartmentData.rating}</p>
+            <div className="host-info">
+              <p className="host-name">{apartmentData.host.name}</p>
+              <img className="host-picture" src={apartmentData.host.picture} alt={apartmentData.host.name} />
             </div>
           </div>
-        </div>
-          <div className="host-info">
-            <p className="host-name">{apartmentData.host.name}</p>
-            <img className="host-picture" src={apartmentData.host.picture} alt={apartmentData.host.name} />
+          <div className="rating-stars">
+            {renderStars()}
           </div>
-              </div>
-      </div>
-    )}
-  </div>
+        </div>
+      )}
+    </div>
   );
 }
 

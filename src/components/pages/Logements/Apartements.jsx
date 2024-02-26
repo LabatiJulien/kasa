@@ -5,6 +5,7 @@ import './Apartement.css';
 function Apartements() {
   const { id } = useParams();
   const [apartmentData, setApartmentData] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
     const fetchApartmentData = async () => {
@@ -25,10 +26,25 @@ function Apartements() {
     fetchApartmentData();
   }, [id]);
 
+  const previousImage = () => {
+    setCurrentImageIndex(prevIndex => (prevIndex === 0 ? apartmentData.pictures.length - 1 : prevIndex - 1));
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex(prevIndex => (prevIndex === apartmentData.pictures.length - 1 ? 0 : prevIndex + 1));
+  };
+
   return (
     <div>
       {apartmentData && (
         <div>
+          <div className="carousel-container">
+          <button className="carousel-arrow carousel-arrow-left" onClick={previousImage}>
+  <img src="/Vector-left.png" alt="Previous" /></button>
+            <img className="carousel-image" src={apartmentData.pictures[currentImageIndex]} alt={`Appartement ${currentImageIndex + 1}`} />
+            <button className="carousel-arrow carousel-arrow-right" onClick={nextImage}>
+  <img src="/Vector-right.png" alt="Next" /></button>
+          </div>
           <h2 className="apartment-title">{apartmentData.title}</h2>
           <p className="apartment-location">Location: {apartmentData.location}</p>
         </div>

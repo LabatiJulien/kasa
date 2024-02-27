@@ -12,7 +12,7 @@
 .apartement.home {
   position: relative;
   border-radius: 1rem;
-  width: calc(33.33% - 2rem); 
+  width: calc(33.33% - 3rem); 
   margin: 1rem;
   overflow: hidden;
 }

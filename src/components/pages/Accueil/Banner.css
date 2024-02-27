@@ -1,10 +1,15 @@
 .banner-image {
-  max-width: 90%;
-    width: 1240px;
-    height: 223px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
+  max-width: calc(100% - 40px);
+  height: auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; 
+}
+
+
+@media screen and (max-width: 500px) {
+  .banner-image {
+    margin: 10px auto; 
   }
-  
+}

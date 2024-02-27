@@ -10,6 +10,7 @@
 
 @media screen and (max-width: 500px) {
   .banner-image {
-    margin: 10px auto; 
+    height: auto;
+    margin: 10px auto;
   }
 }

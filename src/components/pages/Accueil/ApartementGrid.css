@@ -29,13 +29,10 @@
       margin-bottom: 15px;
   }
 
-  .apartement.home {
-      width: calc(50% - 2rem); 
-  }
-  
   @media screen and (max-width: 500px) {
       .apartement.home {
-          width: calc(100% - 2rem);
+        width: calc(100% - 1rem); 
+        margin: 0.5rem;
       }
   }
 }

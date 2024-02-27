@@ -2,7 +2,7 @@
   margin-top: 45px;
   margin-bottom: 50px;
   height: auto; 
-  width: 20vw; 
+  width: 210px; 
   margin-left: 30px;
 }
 
@@ -22,7 +22,7 @@
 @media screen and (max-width: 500px) {
   .logo {
     margin-left: 20px; 
-    width: 30vw;
+    width: 145px;
   }
 
   .menu-items {
@@ -30,11 +30,12 @@
     align-items: center;
     margin-top: 10px; 
     margin-bottom: 10px; 
+    flex-wrap: wrap;
   }
 
   .menu-items a {
     margin: 0 10px; 
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 

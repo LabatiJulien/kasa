@@ -3,7 +3,7 @@ import './About.css';
 import Layout from '../../layout/Layout';
 function About() {
   return (
-    <Layout includeBanner={false}> 
+    <Layout> 
     <div className='about-container'>
     <div className="about-content">
       <img

@@ -28,7 +28,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/flat/:id',
-    element: <Layout> <Apartements/> </Layout>
+    element:  <Apartements/> 
   },
   {
     path: '/about',

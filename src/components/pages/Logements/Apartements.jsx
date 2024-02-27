@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './Apartement.css';
+import Layout from '../../layout/Layout';
 
 function Apartements() {
   const { id } = useParams();
@@ -43,6 +44,7 @@ function Apartements() {
     return [...filledStars, ...emptyStars];
   };
   return (
+    <Layout> 
     <div>
       {apartmentData && (
         <div>
@@ -112,6 +114,7 @@ function Apartements() {
       </div>
       )}
     </div>
+    </Layout>
   );
                 }  
 

@@ -17,7 +17,7 @@ function CustomNavbar() {
           </Link>
           <div className="menu-items"> 
             <Link to={`/`} >Accueil</Link>
-            <Link to={`/about`} >À propos</Link>
+            <Link to={`/about`} >A propos</Link>
           </div>
         </div>
       </Container>

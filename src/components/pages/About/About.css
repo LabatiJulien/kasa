@@ -25,16 +25,21 @@
 
   css
 
-.about-container {
-  display: flex;
-  justify-content: center;
-}
+  .about-container {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
 
-.about-content {
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto; 
-}
+  .about-content {
+    min-height: 80vh; 
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto; 
+  }
+  
 
   details summary {
     list-style: none; 

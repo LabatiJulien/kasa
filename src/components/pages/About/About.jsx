@@ -11,8 +11,8 @@ function About() {
         src="/Banner-image2.png" alt="Bannière"
       />
 
-      <div>
-        <details style={{ margin: '10px' }}>
+      <div className='about-summary'>
+        <details >
           <summary>
             <h3>Fiabilité</h3>
            <img
@@ -27,7 +27,7 @@ function About() {
           </div>
         </details>
 
-        <details style={{ margin: '10px' }}>
+        <details>
           <summary>
             <h3>Respect</h3>
             <img  className='arrow-back'src="/arrow-back.png" alt="Flêche" />
@@ -40,7 +40,7 @@ function About() {
           </div>
         </details>
 
-        <details style={{ margin: '10px' }}>
+        <details>
           <summary>
             <h3>Service</h3>
             <img className='arrow-back' src="/arrow-back.png" alt="Flêche" />
@@ -53,7 +53,7 @@ function About() {
           </div>
         </details>
 
-        <details style={{ margin: '10px' }}>
+        <details>
           <summary>
             <h3>Sécurité</h3>
             <img className='arrow-back'  src="/arrow-back.png" alt="Flêche" />

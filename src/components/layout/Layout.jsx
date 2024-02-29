@@ -6,8 +6,10 @@ function Layout({ children }) {
   return (
     <div>
       <CustomNavbar /> 
-      {children}
-      <Footer />
+      <div className="content-wrapper">
+        {children}
+      </div>
+      <Footer className="main-footer" />
     </div>
   );
 }

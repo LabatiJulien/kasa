@@ -43,79 +43,86 @@ function Apartements() {
     const emptyStars = Array.from({ length: 5 - rating }, (_, index) => <span key={`empty-${index}`} style={{ color: '#E3E3E3' }}>★</span>);
     return [...filledStars, ...emptyStars];
   };
+
   return (
     <Layout> 
-    <div>
-      {apartmentData && (
-        <div>
-          <div className="carousel-container">
-            {totalImages > 1 && (
-              <>
-                <button className="carousel-arrow carousel-arrow-left" onClick={previousImage}>
-                  <img src="/Vector-left.png" alt="Previous" />
-                </button>
-                <img className="carousel-image" src={apartmentData.pictures[currentImageIndex]} alt={`Appartement ${currentImageIndex + 1}`} />
-                <button className="carousel-arrow carousel-arrow-right" onClick={nextImage}>
-                  <img src="/Vector-right.png" alt="Next" />
-                </button>
-                <div className="carousel-counter">{`${currentImageIndex + 1}/${totalImages}`}</div>
-              </>
-            )}
-            {totalImages === 1 && (
-              <img className="carousel-image" src={apartmentData.pictures[0]} alt={`Appartement 1`} />
-            )}
-          </div>
-          <div className="apartment-header">
-            <div>
-              <h2 className="apartment-title">{apartmentData.title}</h2>
-              <p className="apartment-location">Location: {apartmentData.location}</p>  
-              <div className="tags-container">
-                {apartmentData.tags && apartmentData.tags.map((tag, index) => (
-                  <div key={index} className="tag">{tag}</div>
-                ))}
-              </div>         
+      <div>
+        {apartmentData && (
+          <div>
+            <div className="carousel-container">
+              {totalImages > 1 && (
+                <>
+                  <button className="carousel-arrow carousel-arrow-left" onClick={previousImage}>
+                    <img src="/Vector-left.png" alt="Previous" />
+                  </button>
+                  <img className="carousel-image" src={apartmentData.pictures[currentImageIndex]} alt={`Appartement ${currentImageIndex + 1}`} />
+                  <button className="carousel-arrow carousel-arrow-right" onClick={nextImage}>
+                    <img src="/Vector-right.png" alt="Next" />
+                  </button>
+                  <div className="carousel-counter">{`${currentImageIndex + 1}/${totalImages}`}</div>
+                </>
+              )}
+              {totalImages === 1 && (
+                <img className="carousel-image" src={apartmentData.pictures[0]} alt={`Appartement 1`} />
+              )}
             </div>
-            <div className="host-info">
-              <p className="host-name">{apartmentData.host.name}</p>
-              <img className="host-picture" src={apartmentData.host.picture} alt={apartmentData.host.name} />
+            <div className="apartment-header">
+              <div>
+                <h2 className="apartment-title">{apartmentData.title}</h2>
+                <p className="apartment-location">Location: {apartmentData.location}</p>  
+                <div className="tags-container">
+                  {apartmentData.tags && apartmentData.tags.map((tag, index) => (
+                    <div key={index} className="tag">{tag}</div>
+                  ))}
+                </div>         
+              </div>
+              <div className="host-info">
+                <p className="host-name">{apartmentData.host.name}</p>
+                <img className="host-picture" src={apartmentData.host.picture} alt={apartmentData.host.name} />
+              </div>
+            </div>
+            <div className="rating-stars">
+              {renderStars()}
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div>
+                <details style={{ margin: '10px' }}>
+                  <summary className="custom-summary">
+                    <h3>Description</h3>
+                    <img className='arrow-back' src="/arrow-back.png" alt="Flêche" />
+                  </summary>
+                  <div className='descriptionEquipement-container'>
+                    <p>{apartmentData.description} </p>
+                  </div>
+                </details>
+              </div>
+              <div>
+                <details style={{ margin: '10px' }}>
+                  <summary className="custom-summary">
+                    <h3>Équipements</h3>
+                    <img className='arrow-back' src="/arrow-back.png" alt="Flêche" />
+                  </summary>
+                  <div className='descriptionEquipement-container'>
+                    <ul className='equipment-list'>
+                      {apartmentData.equipments.map((equipment, index) => (
+                        <li key={index} className='equipment-item'>{equipment}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </details>
+              </div>
             </div>
           </div>
-          <div className="rating-stars">
-            {renderStars()}
-          </div>
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-  <div>
-    <details style={{ margin: '10px' }}>
-      <summary className="custom-summary">
-        <h3>Description</h3>
-        <img className='arrow-back' src="/arrow-back.png" alt="Flêche" />
-      </summary>
-      <div className='descriptionEquipement-container'>
-        <p>{apartmentData.description} </p>
+        )}
       </div>
-    </details>
-  </div>
- <div>
-    <details style={{ margin: '10px' }}>
-      <summary className="custom-summary">
-        <h3>Équipements</h3>
-        <img className='arrow-back' src="/arrow-back.png" alt="Flêche" />
-      </summary>
-      <div className='descriptionEquipement-container'>
-        <ul className='equipment-list'>
-          {apartmentData.equipments.map((equipment, index) => (
-            <li key={index} className='equipment-item'>{equipment}</li>
-          ))}
-        </ul>
-      </div>
-    </details>
-  </div>
-</div>
-      </div>
-      )}
-    </div>
+      <style>
+        {`
+          .footer {
+            bottom: 0;
+          }
+        `}
+      </style>
     </Layout>
   );
-                }  
-
+}
 export default Apartements;

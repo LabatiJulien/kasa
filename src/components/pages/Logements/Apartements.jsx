@@ -84,7 +84,7 @@ function Apartements() {
             <div className="rating-stars">
               {renderStars()}
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+            <div className="flex-container">
               <div>
                 <details style={{ margin: '10px' }}>
                   <summary className="custom-summary">

@@ -119,6 +119,11 @@
   margin-right: 50px;
 }
 
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .custom-summary {
     height: 20px;
     width: 500px;

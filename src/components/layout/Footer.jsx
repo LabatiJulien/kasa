@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className='footer_logo'>
-        <img src="logo-black.png" alt="Logo Kasa" />
+        <img src="/logo-black.png" alt="Logo Kasa" />
       </div>
       <div className='footer_text'>
         © 2020 Kasa. All rights reserved

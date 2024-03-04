@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './Apartement.css';
 import Layout from '../../layout/Layout';
+import { Navigate } from 'react-router-dom';
 
 function Apartements() {
   const { id } = useParams();
   const [apartmentData, setApartmentData] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [totalImages, setTotalImages] = useState(0);
+  const [apartmentNotFound, setApartmentNotFound] = useState(false);
 
   useEffect(() => {
     const fetchApartmentData = async () => {
@@ -20,6 +22,7 @@ function Apartements() {
           setTotalImages(apartment.pictures.length);
         } else {
           console.error('L\'appartement avec l\'ID spécifié n\'a pas été trouvé.');
+          setApartmentNotFound(true);
         }
       } catch (error) {
         console.error('Erreur lors du chargement des données de l\'appartement:', error);
@@ -43,7 +46,10 @@ function Apartements() {
     const emptyStars = Array.from({ length: 5 - rating }, (_, index) => <span key={`empty-${index}`} style={{ color: '#E3E3E3' }}>★</span>);
     return [...filledStars, ...emptyStars];
   };
-
+  
+  if (apartmentNotFound) {
+    return <Navigate to="/404" replace />;
+  }
   return (
     <Layout> 
       <div>

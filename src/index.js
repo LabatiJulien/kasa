@@ -8,11 +8,24 @@ import Layout from './components/layout/Layout.jsx';
 import { Link } from 'react-router-dom';
 import Apartements from './components/pages/Logements/Apartements.jsx';
 import About from './components/pages/About/About.jsx';
+import { Navigate } from 'react-router-dom';
+
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App/>,
-    errorElement: (
+  },
+  {
+    path: '/flat/:id',
+    element:  <Apartements/> 
+  },
+  {
+    path: '/about',
+    element: <About/>
+  },
+  {
+    path: '/404',
+    element: (
       <Layout>
         <div>     
           <div>
@@ -27,13 +40,10 @@ const router = createBrowserRouter([
     )
   },
   {
-    path: '/flat/:id',
-    element:  <Apartements/> 
-  },
-  {
-    path: '/about',
-    element: <About/>
-  },
+    path: '*',
+    element: <Navigate to="/404" replace />
+  }
+  
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

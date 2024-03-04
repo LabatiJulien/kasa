@@ -7,9 +7,7 @@
     margin: 20px auto;
   }
 
-  css
-
-  .about-container {
+.about-container {
     min-height: calc(100vh - 80px);
     display: flex;
     justify-content: center;
@@ -38,8 +36,7 @@
     margin-bottom: 25px;
   }
   
- 
-  details summary h3 {
+ details summary h3 {
     margin: 0; 
   }
   

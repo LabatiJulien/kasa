@@ -73,23 +73,23 @@
   justify-content: space-between; 
 }
 
-.host-name {
-  color: #ff6060;
-  font-size: 18px;
-}
-
 .host-info {
   display: flex;
   align-items: center;
+  margin-top: -35px;
   margin-right: 30px;
+}
+
+.host-name {
+  color: #ff6060;
+  font-size: 18px;
+  margin-right: 10px; 
 }
 
 .host-picture {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  margin-left: 10px;
-  margin-right: 20px;
 }
 
 .tags-container {
@@ -115,8 +115,8 @@
   font-size: 36px;
   display: flex;
   justify-content: flex-end;
-  margin-top: -40px;
-  margin-right: 50px;
+  margin-top: -45px;
+  margin-right: 30px;
 }
 
 .flex-container {

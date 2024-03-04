@@ -75,7 +75,7 @@ function Apartements() {
             <div className="apartment-header">
               <div>
                 <h2 className="apartment-title">{apartmentData.title}</h2>
-                <p className="apartment-location">Location: {apartmentData.location}</p>  
+                <p className="apartment-location">{apartmentData.location}</p>  
                 <div className="tags-container">
                   {apartmentData.tags && apartmentData.tags.map((tag, index) => (
                     <div key={index} className="tag">{tag}</div>

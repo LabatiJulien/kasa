@@ -69,6 +69,13 @@ function About() {
       </div>
     </div>
     </div>
+    <style>
+        {`
+          .footer {
+            bottom: 0;
+          }
+        `}
+      </style>
     </Layout>
   );
 }

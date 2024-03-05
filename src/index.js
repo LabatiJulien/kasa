@@ -4,11 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './components/pages/Accueil/App.jsx';
 import reportWebVitals from './reportWebVitals';
-import Layout from './components/layout/Layout.jsx';
-import { Link } from 'react-router-dom';
 import Apartements from './components/pages/Logements/Apartements.jsx';
 import About from './components/pages/About/About.jsx';
 import { Navigate } from 'react-router-dom';
+import Error from './components/pages/404/Error404.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,20 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/404',
-    element: (
-      <Layout>
-        <div>     
-          <div>
-            <h1 className="error-title">404</h1>
-            <h2 className="error-subtitle">Oups, La page que vous demandez n'existe pas.</h2>
-            <div className="return-link" style={{ textAlign: 'center' }}>
-              <Link to={`/`} style={{ color: 'black', fontWeight: 'medium', textAlign: 'center', fontSize: '18px' }}>Retourner sur la page d’accueil</Link>
-            </div>
-          </div>
-        </div>
-      </Layout>
-    )
-  },
+    element:<Error/> },
   {
     path: '*',
     element: <Navigate to="/404" replace />

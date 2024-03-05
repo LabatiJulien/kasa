@@ -10,18 +10,3 @@ code {
     monospace;
 }
 
-.error-title {
-  color: #ff6060;
-  font-size: 288px;
-  font-weight: bold;
-  text-align: center;
-}
-
-.error-subtitle {
-  color: #ff6060;
-  font-size: 36px;
-  text-align: center;
-}
-.return-link {
-  margin-bottom: 80px;
-}

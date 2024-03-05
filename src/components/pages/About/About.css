@@ -52,6 +52,7 @@ margin-left: 50px;
   .about-summary p {
     background-color: #f6f6f6;
     width: 92%;
+    margin-top: -20px;
   }
   
   @media (max-width: 768px) {
@@ -62,6 +63,10 @@ margin-left: 50px;
     
     .about-container {
       padding: 20px; 
+    }
+    .about-summary p {
+      width: 95%;
+      margin-top: -20px;
     }
     
   }

@@ -193,6 +193,9 @@ margin-top: -60px;
   .carousel-image{
     height: auto;
   }
+  .footer {
+    height: 23%;
+  }
 }
 
 

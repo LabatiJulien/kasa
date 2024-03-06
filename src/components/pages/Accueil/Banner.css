@@ -1,5 +1,5 @@
 .banner-image {
-  max-width: calc(100% - 40px);
+  width: 90%;
   height: auto; 
   display: flex;
   justify-content: center;

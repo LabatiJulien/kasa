@@ -163,7 +163,6 @@
   .custom-summary {
     width: 90%; 
     margin-left: 10px; 
-    margin-top: 30px;
   }
 
   .apartment-header {
@@ -190,6 +189,9 @@
   .rating-stars {
 margin-right: 280px;
 margin-top: -60px;
+  }
+  .carousel-image{
+    height: auto;
   }
 }
 

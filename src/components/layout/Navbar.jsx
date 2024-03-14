@@ -1,13 +1,12 @@
 import React from 'react';
-import { Navbar, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Navbar.css'; 
 
 function CustomNavbar() {
   return (
-    <Navbar className="navbar" expand="lg"> 
-      <Container>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <div className="navbar-brand">
           <Link to="/">
             <img
               src={`${process.env.PUBLIC_URL}/logo.png`}
@@ -15,13 +14,19 @@ function CustomNavbar() {
               alt="Logo Kasa"
             />
           </Link>
-          <div className="menu-items"> 
-            <Link to={`/`} >Accueil</Link>
-            <Link to={`/about`} >A propos</Link>
-          </div>
         </div>
-      </Container>
-    </Navbar>
+        <div className="menu-items">
+          <ul>
+            <li>
+              <Link to="/">Accueil</Link>
+            </li>
+            <li>
+              <Link to="/about">À propos</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 }
 

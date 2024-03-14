@@ -29,7 +29,8 @@ function ApartementsGrid() {
           <Link to={`/flat/${apartement.id}`} key={apartement.id} className="apartement home">
             <img className="apartementCover" src={apartement.cover} alt={apartement.title} />
             <div className="apartementSubtitle">{apartement.title}</div>
-          </Link>
+          </Link> //le mapping sur le tableau apartementsData génère des éléments JSX pour chaque appartement dans le tableau, 
+          //créant ainsi une liste de liens vers les pages de détails des appartements avec leurs images de couverture et leurs titres.
         ))}
       </div>
     </div>

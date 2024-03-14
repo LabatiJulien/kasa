@@ -20,43 +20,39 @@
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
-  .grid {
-      justify-content: center;
-      background-color: white;
-      padding: 0;
-      max-width: 95vw;
-      margin-bottom: 15px;
-      padding-bottom: 50px;
-  }
-
-  @media screen and (max-width: 500px) {
-      .apartement.home {
-        width: calc(100% - 1rem); 
-        margin: 0.5rem;
-      }
-  }
+.apartementCover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 340px;
 }
 
-.apartementCover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-height: 340px;
+.apartementSubtitle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+/* Media Query */
+@media only screen and (max-width: 600px) {
+  .grid {
+    justify-content: center;
+    background-color: white;
+    padding: 0;
+    max-width: 95vw;
+    margin-bottom: 15px;
+    padding-bottom: 50px;
   }
-  
-  .apartementSubtitle {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: white;
-    font-weight: bold;
-    padding: 0.5rem;
-    box-sizing: border-box;
+  .apartement.home {
+    width: calc(100% - 1rem);
+    margin: 0.5rem;
   }
-  @media only screen and (max-width: 600px) {
-    .apartementCover {
-      max-height: 255px;
-    }
+  .apartementCover {
+    max-height: 255px;
   }
+}

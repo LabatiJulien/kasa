@@ -129,9 +129,9 @@
 
 .custom-summary {
     height: 20px;
-    width: 500px;
-    margin-left: 50px;
-    margin-right: 50px;
+    min-width: 500px;
+    margin-left:auto;
+    margin-right: auto;
     background-color: #ff6060;
     padding: 10px;
     border: 1px solid lightgray;
@@ -170,6 +170,7 @@
   .custom-summary {
     width: 90%; 
     margin-left: 10px; 
+    min-width: auto;
   }
 
   .apartment-header {
@@ -218,6 +219,3 @@ justify-content: flex-start;
     padding-block-start: 30%;
   }
 }
-
-
-

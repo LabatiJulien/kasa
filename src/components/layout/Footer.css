@@ -13,20 +13,23 @@ body {
 
 .content {
   flex: 1;
-  padding-bottom: 50px;
 }
 
 .footer {
-  position: absolute; 
   left: 0; 
   width: 100%; 
   background-color: black;
   color: white;
   text-align: center;
+  position: absolute;
 }
 
 @media screen and (max-width: 600px) {
   .footer {
     font-size: 14px; 
+  }
+  
+  .content {
+    margin-bottom: 50px;
   }
 }

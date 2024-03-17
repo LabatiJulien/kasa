@@ -154,7 +154,12 @@
 .equipment-item {
   display: block; 
 }
-
+@media only screen and (max-width: 1000px) {
+  .flex-container {
+      flex-direction: column; 
+      margin-top: 50px;
+  } 
+}
 @media only screen and (max-width: 600px) {
   .flex-container {
     flex-direction: column; 
@@ -187,10 +192,10 @@
 
   .host-info {
     margin-top: 30px;
-    margin-left: 288px;
+    margin-left: 70%;
   }
   .rating-stars {
-margin-left: 10px;
+margin-left: 5%;
 margin-top: -60px;
 justify-content: flex-start;
   }
@@ -202,7 +207,17 @@ justify-content: flex-start;
   }
   
 }
-
+@media only screen and (max-width: 340px) {
+  .host-info {
+    display: flex;
+    flex-direction: column;
+  }
+  .rating-stars{
+    display: flex;
+    flex-direction: row;
+    padding-block-start: 30%;
+  }
+}
 
 
 
